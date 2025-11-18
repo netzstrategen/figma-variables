@@ -24,6 +24,19 @@ Run tests in watch mode during development:
 npm run test:watch
 ```
 
+### Continuous Integration
+
+This project uses GitHub Actions for automated testing:
+
+- **Workflow File**: `.github/workflows/test.yml`
+- **Triggers**:
+  - All push events (any branch)
+  - All pull requests
+- **Test Matrix**: Tests run on Node.js versions 14.x, 16.x, 18.x, and 20.x
+- **Status**: Check the badge on the README for current test status
+
+All pull requests must pass CI tests before being merged.
+
 ## Making Changes
 
 1. Create a new branch for your feature or bugfix

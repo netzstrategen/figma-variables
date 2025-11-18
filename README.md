@@ -1,5 +1,9 @@
 # Figma Variables Transformer
 
+![Tests](https://github.com/netzstrategen/figma-variables/actions/workflows/test.yml/badge.svg)
+![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 An opinionated translation utility that transforms Figma-exported CSS variables into clean, organized, production-ready CSS custom properties.
 
 ## Features
@@ -86,7 +90,7 @@ npm run tokens
 ### Programmatic Usage (If Installed as Dependency)
 
 ```javascript
-const { transformCSS } = require('@netzstrategen/figma-variables');
+import { transformCSS } from '@netzstrategen/figma-variables';
 
 transformCSS('./input.css', './output.css');
 ```
@@ -220,6 +224,14 @@ Tests verify:
 - Output structure and formatting
 - Error handling
 
+### Continuous Integration
+
+This project uses GitHub Actions for automated testing. Tests run automatically on:
+- All push events (any branch)
+- All pull requests
+
+Tests are executed on multiple Node.js versions (14.x, 16.x, 18.x, 20.x) to ensure compatibility.
+
 ## Development
 
 ```bash
@@ -244,7 +256,7 @@ npx . original.css output.css
 
 ## Requirements
 
-- Node.js 12.x or higher
+- Node.js 14.x or higher (ES Modules support)
 - No external dependencies for production (uses only Node.js built-in modules)
 - Vitest for testing (dev dependency only)
 
