@@ -232,6 +232,26 @@ This project uses GitHub Actions for automated testing. Tests run automatically 
 
 Tests are executed on multiple Node.js versions (20.x, 22.x) to ensure compatibility.
 
+#### Testing Workflows Locally
+
+You can test GitHub Actions workflows locally using [act](https://github.com/nektos/act) before pushing to the repository:
+
+```bash
+# Install act (macOS)
+brew install act
+
+# Run workflows locally
+act push
+
+# Run specific job
+act -j test
+
+# See detailed guide
+cat .github/ACT.md
+```
+
+This allows you to test changes to workflows without polluting your git history with test commits.
+
 ## Development
 
 ```bash

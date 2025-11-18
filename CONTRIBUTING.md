@@ -37,6 +37,29 @@ This project uses GitHub Actions for automated testing:
 
 All pull requests must pass CI tests before being merged.
 
+#### Testing Workflows Locally with Act
+
+Before pushing, you can test GitHub Actions workflows locally using [act](https://github.com/nektos/act):
+
+```bash
+# Install act
+brew install act  # macOS
+# or check https://github.com/nektos/act#installation for other platforms
+
+# Test workflows locally
+act push              # Run all workflows
+act -j test           # Run specific job
+act --list            # List available jobs
+```
+
+Benefits:
+- ✅ Test workflow changes without pushing
+- ✅ Faster feedback loop
+- ✅ No polluted git history with test commits
+- ✅ Works offline after initial setup
+
+For detailed instructions, see [.github/ACT.md](.github/ACT.md).
+
 ## Making Changes
 
 1. Create a new branch for your feature or bugfix
