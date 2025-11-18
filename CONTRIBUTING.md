@@ -32,7 +32,7 @@ This project uses GitHub Actions for automated testing:
 - **Triggers**:
   - All push events (any branch)
   - All pull requests
-- **Test Matrix**: Tests run on Node.js versions 14.x, 16.x, 18.x, and 20.x
+- **Test Matrix**: Tests run on Node.js versions 20.x and 22.x
 - **Status**: Check the badge on the README for current test status
 
 All pull requests must pass CI tests before being merged.
