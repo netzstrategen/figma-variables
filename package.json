@@ -4,7 +4,6 @@
   "description": "An opinionated translation utility that transforms Figma-exported CSS variables into clean, organized, production-ready CSS custom properties.",
   "type": "module",
   "main": "index.js",
-  "private": true,
   "bin": {
     "figma-variables": "./index.js"
   },
