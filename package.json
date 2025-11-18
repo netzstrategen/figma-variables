@@ -1,0 +1,48 @@
+{
+  "name": "@netzstrategen/figma-variables",
+  "version": "1.0.0",
+  "description": "An opinionated translation utility that transforms Figma-exported CSS variables into clean, organized, production-ready CSS custom properties.",
+  "type": "module",
+  "main": "index.js",
+  "private": true,
+  "bin": {
+    "figma-variables": "./index.js"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "figma",
+    "css",
+    "variables",
+    "design-tokens",
+    "css-variables",
+    "custom-properties",
+    "design-system",
+    "tokens",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netzstrategen/figma-variables.git"
+  },
+  "bugs": {
+    "url": "https://github.com/netzstrategen/figma-variables/issues"
+  },
+  "homepage": "https://github.com/netzstrategen/figma-variables#readme",
+  "author": "italodr@gmail.com",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "vitest": "^1.6.1"
+  }
+}

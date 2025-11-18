@@ -1,0 +1,27 @@
+# Test files
+test/
+*.test.js
+vitest.config.js
+
+# Example/development files
+original.css
+expected.css
+output.css
+
+# Development files
+.gitignore
+*.log
+.DS_Store
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+
+# Build/Coverage
+coverage/
+
+# Documentation (keep only README in package)
+CONTRIBUTING.md
+CHANGELOG.md
+
