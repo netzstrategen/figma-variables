@@ -775,8 +775,32 @@ function sortModeVariables(a, b) {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Check if this script is being run directly (not imported as a module)
+// This handles multiple scenarios:
+// 1. Direct execution: node index.js
+// 2. Shebang execution: ./index.js
+// 3. npx execution: npx @netzstrategen/figma-variables
+// 4. Global installation: figma-variables
+const isMainModule = () => {
+  if (!process.argv[1]) return false;
+
+  const scriptPath = process.argv[1];
+
+  // Check if the script path matches this file
+  if (import.meta.url === `file://${scriptPath}`) return true;
+  if (__filename === scriptPath) return true;
+
+  // Check if it ends with index.js (handles symlinks and npx)
+  if (scriptPath.endsWith('/index.js') || scriptPath.endsWith('\\index.js')) return true;
+
+  // Check if it's the bin name from package.json
+  if (scriptPath.endsWith('/figma-variables') || scriptPath.endsWith('\\figma-variables')) return true;
+
+  return false;
+};
+
 // Parse command line arguments and execute
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isMainModule()) {
   const args = process.argv.slice(2);
 
   // Handle help flag
