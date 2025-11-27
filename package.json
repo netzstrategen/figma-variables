@@ -1,6 +1,6 @@
 {
   "name": "@netzstrategen/figma-variables",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An opinionated translation utility that transforms Figma-exported CSS variables into clean, organized, production-ready CSS custom properties.",
   "type": "module",
   "main": "index.js",
